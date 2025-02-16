@@ -7,21 +7,14 @@
 
 // "The_Stealth-Warrior" gets converted to "TheStealthWarrior"
 
-function toCamelCase(str: string): string {
+export function toCamelCase(str: string): string {
   if (!str) return "";
   str = str.replace(/-/g, "_");
   let arr = str.split("_");
   return arr
     .map((word, index) => {
-      if (index === 0) {
-        return word;
-      }
+      if (!index) return word;
       return word.charAt(0).toUpperCase() + word.slice(1);
     })
     .join("");
 }
-
-console.log(toCamelCase("")); // ""
-console.log(toCamelCase("the_stealth_warrior")); // "theStealthWarrior"
-console.log(toCamelCase("The-Stealth-Warrior")); // "TheStealthWarrior"
-console.log(toCamelCase("A-B-C")); // "ABC"

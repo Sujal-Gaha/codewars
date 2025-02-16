@@ -8,13 +8,10 @@
 
 // Note: for this kata y isn't considered a vowel.
 
-function disemvowel(str: string) {
+export function disemvowel(str: string) {
   const vowels = "aeiouAEIOU";
   return str
     .split("")
     .filter((char) => !vowels.includes(char))
     .join("");
 }
-
-console.log(disemvowel("This website is for losers LOL!")); // "Ths wbst s fr lsrs LL!"
-console.log(disemvowel("What are you, a communist?")); // "Wht r y,  cmmnst?"

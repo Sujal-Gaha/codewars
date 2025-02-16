@@ -12,7 +12,7 @@
 // "Skippy" --> "##ippy"
 // "Nananananananananananananananana Batman!" --> "####################################man!"
 
-function maskify(cc: string): string {
+export function maskify(cc: string): string {
   const str = cc.split("");
   const { length } = str;
 
@@ -24,7 +24,3 @@ function maskify(cc: string): string {
 
   return str.join("");
 }
-
-console.log(maskify("4556364607935616")); // '############5616'
-console.log(maskify("1")); // '1'
-console.log(maskify("11111")); // '#1111'

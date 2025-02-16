@@ -7,13 +7,7 @@
 // name + " does not play banjo"
 // Names given are always valid strings.
 
-function areYouPlayingBanjo(name: string): string {
+export const areYouPlayingBanjo = (name: string): string => {
   if (name.charAt(0).toLocaleLowerCase() === "r") return name + " plays banjo";
   return name + " does not play banjo";
-}
-
-console.log(areYouPlayingBanjo("Adam")); // "Adam does not play banjo"
-console.log(areYouPlayingBanjo("Paul")); // "Paul does not play banjo"
-console.log(areYouPlayingBanjo("Ringo")); // "Ringo plays banjo"
-console.log(areYouPlayingBanjo("bravo")); // "bravo does not play banjo"
-console.log(areYouPlayingBanjo("rolf")); // "rolf plays banjo"
+};

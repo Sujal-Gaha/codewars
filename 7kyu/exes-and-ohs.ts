@@ -8,7 +8,7 @@
 // XO("zpzpzpp") => true // when no 'x' and 'o' is present should return true
 // XO("zzoo") => false
 
-function XO(str: string): boolean {
+export function XO(str: string): boolean {
   const arrStr = str.split("").map((item) => item.toLowerCase());
   let countOfX = 0;
   let countOfO = 0;
@@ -23,9 +23,3 @@ function XO(str: string): boolean {
   });
   return countOfX === countOfO;
 }
-
-console.log(XO("xo")); // true
-console.log(XO("xxOo")); // true
-console.log(XO("xxxm")); // false
-console.log(XO("Oo")); // false
-console.log(XO("ooom")); // false

@@ -11,7 +11,7 @@
 // "ATTGC" --> "TAACG"
 // "GTAT" --> "CATA"
 
-function dnaStrand(dna: string): string {
+export function dnaStrand(dna: string): string {
   let res = "";
 
   for (let i = 0; i < dna.length; i++) {
@@ -27,7 +27,3 @@ function dnaStrand(dna: string): string {
   }
   return res;
 }
-
-console.log(dnaStrand("AAAA")); // "TTTT"
-console.log(dnaStrand("ATTGC")); // "TAACG"
-console.log(dnaStrand("GTAT")); // "CATA"
