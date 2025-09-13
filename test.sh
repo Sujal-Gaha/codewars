@@ -25,5 +25,29 @@ run_typescript_test() {
     yarn test
 }
 
-run_python_test
-run_typescript_test
+choose_test() {
+    echo "Which test do you want to run?"
+    echo "1) Python"
+    echo "2) TypeScript"
+    echo "3) Both"
+    echo "4) Exit"
+    read -rp "Enter choice [1-4]: " choice
+
+    case $choice in
+        1) run_python_test ;;
+        2) run_typescript_test ;;
+        3) run_python_test && run_typescript_test ;;
+        4) echo "Exiting..."; exit 0 ;;
+        *) echo "Invalid choice"; choose_test ;;
+    esac
+}
+
+
+PARAM="$1"
+
+case $PARAM in
+    python) run_python_test ;;
+    typescript) run_typescript_test ;;
+    "" ) choose_test ;;
+    *) echo "Invalid parameter. Use: python | typescript" ; exit 1 ;;
+esac
