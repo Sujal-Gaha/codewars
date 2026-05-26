@@ -25,19 +25,26 @@ run_typescript_test() {
     yarn test
 }
 
+update_readme() {
+    echo "Updating README.md..."
+    python3 "$PROJECT_ROOT/scripts/update_readme.py"
+}
+
 choose_test() {
-    echo "Which test do you want to run?"
-    echo "1) Python"
-    echo "2) TypeScript"
-    echo "3) Both"
-    echo "4) Exit"
-    read -rp "Enter choice [1-4]: " choice
+    echo "Which action do you want to perform?"
+    echo "1) Run Python tests"
+    echo "2) Run TypeScript tests"
+    echo "3) Run all tests"
+    echo "4) Update README dashboard"
+    echo "5) Exit"
+    read -rp "Enter choice [1-5]: " choice
 
     case $choice in
         1) run_python_test ;;
         2) run_typescript_test ;;
         3) run_python_test && run_typescript_test ;;
-        4) echo "Exiting..."; exit 0 ;;
+        4) update_readme ;;
+        5) echo "Exiting..."; exit 0 ;;
         *) echo "Invalid choice"; choose_test ;;
     esac
 }
@@ -48,6 +55,7 @@ PARAM="$1"
 case $PARAM in
     python) run_python_test ;;
     typescript) run_typescript_test ;;
+    update) update_readme ;;
     "" ) choose_test ;;
-    *) echo "Invalid parameter. Use: python | typescript" ; exit 1 ;;
+    *) echo "Invalid parameter. Use: python | typescript | update" ; exit 1 ;;
 esac
