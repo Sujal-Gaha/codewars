@@ -6,10 +6,10 @@ My personal collection of Codewars solutions, tracked and categorized by languag
 
 | Language       | 8kyu | 7kyu | 6kyu | Total  |
 | :------------- | :--: | :--: | :--: | :----: |
-| **Python**     |  6   |  0   |  0   | **6**  |
+| **Python**     |  7   |  1   |  0   | **8**  |
 | **Typescript** |  48  |  22  |  2   | **72** |
 
-**Grand Total Solved: 78**
+**Grand Total Solved: 80**
 
 ## Structure
 
