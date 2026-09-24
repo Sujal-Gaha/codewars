@@ -2,6 +2,8 @@
 
 My personal collection of Codewars solutions, tracked and categorized by language and difficulty.
 
+This repository is my sanctuary for intentional engineering—no vibecoding, no AI. Every line is written by hand.
+
 ## Progress Dashboard
 
 | Language       | 8kyu | 7kyu | 6kyu | Total  |
